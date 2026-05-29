@@ -100,3 +100,38 @@ describe('PopoverController', () => {
     expect(document.querySelector('.popover-title').textContent).toBe('Test title');
   });
 });
+
+describe('PopoverController reads data-attributes', () => {
+  let button;
+  let controller;
+
+  beforeEach(() => {
+    button = document.createElement('button');
+    button.dataset.title = 'Data Title';
+    button.dataset.content = 'Data Content';
+    document.body.append(button);
+    button.getBoundingClientRect = () => ({
+      top: 200, left: 100, width: 120, height: 40, bottom: 240, right: 220,
+    });
+    controller = new PopoverController(button, {
+      title: button.dataset.title,
+      content: button.dataset.content,
+    });
+    controller.init();
+  });
+
+  afterEach(() => {
+    document.body.innerHTML = '';
+  });
+
+  test('reads title from data-title attribute', () => {
+    button.click();
+    expect(document.querySelector('.popover-title').textContent).toBe('Data Title');
+  });
+
+  test('reads content from data-content attribute', () => {
+    button.click();
+    expect(document.querySelector('.popover-content').textContent).toBe('Data Content');
+  });
+});
+
