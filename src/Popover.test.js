@@ -133,5 +133,3 @@ describe('PopoverController reads data-attributes', () => {
     button.click();
     expect(document.querySelector('.popover-content').textContent).toBe('Data Content');
   });
-});
-
