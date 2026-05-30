@@ -2,7 +2,6 @@
 
 ![CI](https://github.com/ivankhom/ahj-popover/actions/workflows/web.yml/badge.svg)
 
-Виджет Popover на чистом JS без jQuery. Появляется сверху над кнопкой, центрируется по горизонтали.
 
 ## Демо
 
