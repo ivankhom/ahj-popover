@@ -1,12 +1,12 @@
 # Popover Widget
 
-![CI](https://github.com/<OWNER>/<REPOSITORY>/actions/workflows/web.yml/badge.svg)
+![CI](https://github.com/ivankhom/ahj-popover/actions/workflows/web.yml/badge.svg)
 
 Виджет Popover на чистом JS без jQuery. Появляется сверху над кнопкой, центрируется по горизонтали.
 
 ## Демо
 
-[GitHub Pages](<PAGES_URL>)
+[GitHub Pages](https://ivankhom.github.io/ahj-popover/)
 
 ## Запуск
 
